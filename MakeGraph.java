@@ -201,7 +201,7 @@ public class MakeGraph {
                 }
             }
         }
-        try (FileWriter myWriter = new FileWriter("F:\\Downloads\\CFG-master\\LeveledNodes.txt")) {
+        try (FileWriter myWriter = new FileWriter("LeveledNodes.txt")) {
             myWriter.write((Lines.size())+"\n");
             for(int i=0; i<Lines.size(); i++){
                 myWriter.write(i + " " + level[i]+"\n");
@@ -230,7 +230,7 @@ public class MakeGraph {
         }
     }
     public void saveGraph() throws IOException{
-        try (FileWriter myWriter = new FileWriter("F:\\Downloads\\CFG-master\\Edges.txt")) {
+        try (FileWriter myWriter = new FileWriter("Edges.txt")) {
             //myWriter.write((Lines.size())+"\n");
             for(int i=0; i<Lines.size(); i++){
                 for(int j=0; j<Lines.size(); j++){

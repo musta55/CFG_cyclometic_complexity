@@ -7,6 +7,9 @@
    	    else if(a==b+2){
 	        printf("a=b+2");
 	    }
+   	    else if(a==b+3){
+	        printf("a=b+3");
+	    }
 	    else{
 	        printf("None");
 	    }

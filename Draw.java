@@ -10,17 +10,17 @@ package cfg;
  * @author Asus
  */
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.HashMap;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
-import static javafx.application.Application.launch;
 
 public class Draw extends Application {
 
@@ -36,8 +36,8 @@ public class Draw extends Application {
     }
     
     private void initGraph(Group root) throws FileNotFoundException {
-        File file1 = new File("F:\\Downloads\\CFG-master\\LeveledNodes.txt");
-        File file2 = new File("F:\\Downloads\\CFG-master\\test.txt");
+        File file1 = new File("LeveledNodes.txt");
+        File file2 = new File("Edges.txt");
         Scanner scan1 = new Scanner(file1);
         Scanner scan2 = new Scanner(file2);
         
@@ -72,7 +72,7 @@ public class Draw extends Application {
             root.getChildren().add(curNode);
         }
         
-        File file3 = new File("F:\\Downloads\\CFG-master\\Edges.txt");
+        File file3 = new File("Edges.txt");
         Scanner scan3 = new Scanner(file3);
         while(scan3.hasNextInt()){
             
@@ -84,7 +84,7 @@ public class Draw extends Application {
             //System.out.println("X " + source + " " + dest);
 
             Edge connection = new Edge(map.get(source),map.get(dest));
-            connection.setStroke(Color.CYAN);
+            connection.setStroke(Color.BLANCHEDALMOND);
             connection.setStrokeWidth(5);
             root.getChildren().add(0, connection);
         }
