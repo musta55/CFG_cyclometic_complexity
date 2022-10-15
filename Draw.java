@@ -5,10 +5,7 @@
  */
 package cfg;
 
-/**
- *
- * @author Asus
- */
+
 
 import javafx.application.Application;
 import javafx.scene.Group;
@@ -30,7 +27,7 @@ public class Draw extends Application {
 
         initGraph(root);
 
-        Scene scene = new Scene(root, 1800, 800);
+        Scene scene = new Scene(root, 1500, 700);
         stage.setScene(scene);
         stage.show();
     }
@@ -67,7 +64,7 @@ public class Draw extends Application {
             int thisLevelAlreadyHasNodes = numberofNodesInLevel[levelOfCurNode];
             numberofNodesInLevel[levelOfCurNode]++;
             int adjustor = thisLevelAlreadyHasNodes;
-            GraphicNode curNode = new GraphicNode(150*(adjustor+1), levelOfCurNode*70, Lines.get(nodeNumber), Integer.toString(nodeNumber));
+            GraphicNode curNode = new GraphicNode(120*(adjustor+1), levelOfCurNode*40, Lines.get(nodeNumber), Integer.toString(nodeNumber));
             map.put(nodeNumber, curNode);
             root.getChildren().add(curNode);
         }
@@ -85,7 +82,7 @@ public class Draw extends Application {
 
             Edge connection = new Edge(map.get(source),map.get(dest));
             connection.setStroke(Color.BLANCHEDALMOND);
-            connection.setStrokeWidth(5);
+            connection.setStrokeWidth(7);
             root.getChildren().add(0, connection);
         }
     }

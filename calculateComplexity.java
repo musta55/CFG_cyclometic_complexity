@@ -31,7 +31,7 @@ public class calculateComplexity {
         System.out.println("elsifs: " + elsifs);
         System.out.println("els: " + els);
         System.out.println("loops: " + loops);
-        complexity= ifs+elsifs+els+loops;
+        complexity= ifs+elsifs+els+loops+1;
         return complexity;
     }
 }

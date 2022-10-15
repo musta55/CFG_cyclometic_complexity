@@ -46,6 +46,8 @@ public class MakeGraph {
         bfs(root);
         printGraph();
         saveGraph();
+        calculateComplexity calc=new calculateComplexity();
+        System.out.println("Cyclometic complexity is "+calc.calculate(Lines));
         //DrawGraph draw = new DrawGraph();
         //nodesInLevel = draw.drawGraphWithAjacencyMatrix(adj,cur+1,root.nodeNumber);
         //System.out.println("nodesInLevel has currently size "+ nodesInLevel.size());
@@ -221,13 +223,27 @@ public class MakeGraph {
             System.out.println();
         }
         System.out.println("\nAdjacency Matrix:");
+
+        int vertexCount=0;
         for(int i=0; i<Lines.size(); i++){
             System.out.print("\t"+i+"\t");
             for(int j=0; j<Lines.size(); j++){
                 System.out.print(adj[i][j]+" ");
+                if(adj[i][j]==1)
+                {
+                    vertexCount++;
+                }
             }
             System.out.println();
         }
+
+        int edgeCount=Lines.size()-1;
+        System.out.println("Edges "+(edgeCount));
+
+        System.out.println("Verteces "+vertexCount);
+
+        int compCFG=vertexCount-edgeCount+2;
+        System.out.println("Cyclometic complexity using cfg is "+compCFG);
     }
     public void saveGraph() throws IOException{
         try (FileWriter myWriter = new FileWriter("Edges.txt")) {
