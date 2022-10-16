@@ -11,10 +11,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/**
- *
- * @author sikde
- */
 public class SourceCodeReader {
 
     public SourceCodeReader(String s) throws FileNotFoundException, IOException{

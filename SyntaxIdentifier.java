@@ -5,13 +5,8 @@
  */
 package cfg;
 
-/**
- *
- * @author sikde
- */
 public class SyntaxIdentifier {
-    
-    
+
     public boolean isExpression(String statement){
         statement = statement.replaceAll("\\s","");
         return (statement.charAt(0)!='/' && statement.charAt(1)!='/' && statement.charAt(statement.length()-1)==';');
