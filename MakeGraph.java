@@ -52,7 +52,7 @@ public class MakeGraph {
         //nodesInLevel = draw.drawGraphWithAjacencyMatrix(adj,cur+1,root.nodeNumber);
         //System.out.println("nodesInLevel has currently size "+ nodesInLevel.size());
         Draw drawGraph = new Draw();
-        drawGraph.main();
+     //   drawGraph.main();
     }
     
     
@@ -69,7 +69,7 @@ public class MakeGraph {
         if(checker.isElse(curNode.Statement)){
             //System.out.println("Else - "+ curNode.Statement);
             
-            par.childs.add(curNode);
+            par.childs.add(curNode);           //create branch
             cur++;
             branchingsOfThisBranch.add(makeRelations(curNode, false));
         }
@@ -130,12 +130,7 @@ public class MakeGraph {
             cur++;
             makeRelations(curNode, true);
         }
-        
-        
-        
-        
-        
-        
+
         else{
             //System.out.println("Statement - "+ curNode.Statement+branchingsOfThisBranch.size());
              if(branchingsOfThisBranch.size()>0){
